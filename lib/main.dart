@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:meal_app/screens/Category_Meal_Screen.dart';
 import 'package:meal_app/screens/Category_Screen.dart';
-import 'package:meal_app/screens/filters_screen.dart';
 import 'package:meal_app/screens/meal_details_screen.dart';
-import 'package:meal_app/screens/taps_screen.dart';
 
 void main() => runApp(const MyApp());
 
@@ -33,33 +31,31 @@ class MyApp extends StatelessWidget {
               )
             )
       ),
-      home: const TapsScreen(),
+      home: const CategoriesScreen(),
       routes: {
-        'MainPage':(context) => const TapsScreen(),
         CategoryMealScreen.routname:(context) => const CategoryMealScreen(),
         MealDetailScreen.routname:(context) => const MealDetailScreen(),
-        FiltersScreen.routname:(context) => const FiltersScreen()
       },
     );
   }
 }
 
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key});
+// class MyHomePage extends StatefulWidget {
+//   const MyHomePage({super.key});
 
-  @override
-  State<MyHomePage> createState() => _MyHomePageState();
-}
+//   @override
+//   State<MyHomePage> createState() => _MyHomePageState();
+// }
 
-class _MyHomePageState extends State<MyHomePage> {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text("Meal App"),
-        backgroundColor: Theme.of(context).primaryColor,
-      ),
-      body: const CategoriesScreen(),
-    );
-  }
-}
+// class _MyHomePageState extends State<MyHomePage> {
+//   @override
+//   Widget build(BuildContext context) {
+//     return Scaffold(
+//       appBar: AppBar(
+//         title: const Text("Meal App"),
+//         backgroundColor: Theme.of(context).primaryColor,
+//       ),
+//       body: const CategoriesScreen(),
+//     );
+//   }
+// }
